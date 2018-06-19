@@ -1,0 +1,18 @@
+.list {
+  margin: 24px 0;
+}
+
+.list__item {
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.list__counter {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 32px;
+  font-size: 15px;
+  font-weight: 600;
+  /* Offset numbers to match baseline of text of each item */
+  margin-top: 4px;
+}

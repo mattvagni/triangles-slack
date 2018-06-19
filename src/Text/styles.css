@@ -1,0 +1,9 @@
+.text {
+	font-size: 16px;
+  line-height: 1.4;
+  margin: 16px 0;
+}
+
+.text--isInline {
+  margin: 0;
+}

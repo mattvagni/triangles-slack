@@ -1,0 +1,19 @@
+.heading {
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.heading--h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.heading--h2 {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.heading--h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
