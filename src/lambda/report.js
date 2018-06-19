@@ -31,7 +31,7 @@ export function handler(event, context, callback) {
       callback(null, {
         statusCode: 200,
         body:
-          'Your message has been shared with the admins. When one of them is next available - they will respond.'
+          'The admins have been notified of your report. They will address it and respond as soon as possible'
       });
     })
     .catch(err => {
