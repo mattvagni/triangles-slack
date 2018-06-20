@@ -1,10 +1,17 @@
 .heading {
   line-height: 1.4;
   margin-bottom: 16px;
+  color: #F1F1F1;
+}
+
+p + .heading,
+ol + .heading,
+ul + .heading {
+  margin-top: 40px;
 }
 
 .heading--h1 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 600;
 }
 

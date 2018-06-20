@@ -1,6 +1,19 @@
 .app {
+	min-width: 100vw;
+	min-height: 100vh;
+	background: #2C2443;
+	overflow: auto;
+}
+
+.app__content {
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	line-height: 1;
-	width: 500px;
-	margin: 100px auto;
+	width: 600px;
+	margin: 100px auto 400px;
+}
+
+.app__logo {
+	width: 64px;
+	height: 64px;
+	margin: 0 0 32px;
 }

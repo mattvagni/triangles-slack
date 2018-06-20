@@ -1,0 +1,9 @@
+.divider {
+  margin: 48px 0;
+  border: none;
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.5);
+}

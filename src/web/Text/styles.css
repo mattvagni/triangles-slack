@@ -2,6 +2,12 @@
 	font-size: 16px;
   line-height: 1.4;
   margin: 16px 0;
+  color: #C6BEC7;
+}
+
+.text strong {
+  font-weight: 500;
+  color: #FFF;
 }
 
 .text--isInline {
