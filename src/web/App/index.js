@@ -19,8 +19,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: 'test@test.com',
-      link: 'www.google.com',
+      email: '',
+      link: '',
       requestStatus: 'idle',
     }
 
