@@ -7,7 +7,7 @@ const web = new WebClient(token);
 
 export function handler(event, context, callback) {
   const requestBody = parse(event.body);
-  const isChannelPublic = requestBody.channel_name === 'privategroup';
+  const isChannelPublic = requestBody.channel_name !== 'privategroup';
 
   web.chat.postMessage({
     channel: config.adminChannelId,
@@ -27,7 +27,7 @@ export function handler(event, context, callback) {
           title: 'Message',
           value: requestBody.text,
         } : null,
-      ]
+      ].filter(Boolean)
     }]
   })
   .then(() => {
