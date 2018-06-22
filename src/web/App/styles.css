@@ -28,3 +28,16 @@
 .app__form {
 	margin-top: 80px;
 }
+
+.app__form-status {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 24px;
+}
+
+.app__form-status-icon {
+	margin-right: 8px;
+	width: 22px;
+	height: 22px;
+}

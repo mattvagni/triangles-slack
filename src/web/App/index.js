@@ -8,6 +8,9 @@ import List from '../List';
 import Text from '../Text';
 import TextInput from '../TextInput';
 import logo from './images/logo.svg';
+import checkCircleIcon from './images/check-circle.svg';
+import crossCircleIcon from './images/cross-circle.svg';
+
 import './reset.css';
 import './styles.css';
 
@@ -18,7 +21,7 @@ class App extends Component {
     this.state = {
       email: 'test@test.com',
       link: 'www.google.com',
-      isSubmitting: false,
+      requestStatus: 'idle',
     }
 
     this.onSubmit = this.onSubmit.bind(this);
@@ -28,14 +31,113 @@ class App extends Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({
-      isSubmitting: true,
+      requestStatus: 'pending',
     });
+
+    fetch('/.netlify/functions/request-invite/', {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      method: 'POST',
+      body: JSON.stringify({
+        email: this.state.email,
+        link: this.state.link
+      })
+    })
+    .then(res => {
+      if (res.status > 200) {
+        throw new Error('Back-end error');
+      }
+      this.setState({
+        email: '',
+        link: '',
+        requestStatus: 'success',
+      })
+    })
+    .catch(err => {
+      console.error(err);
+      this.setState({
+        requestStatus: 'failure'
+      })
+    })
   }
 
   onFieldChange(event) {
     this.setState({
       [event.currentTarget.name]: event.currentTarget.value,
     });
+  }
+
+  renderRequestStatus() {
+    const imageProps = {
+      className: 'app__form-status-icon',
+      'aria-hidden': true,
+    };
+
+    if (this.state.requestStatus === 'success') {
+      return (
+        <React.Fragment>
+          <img alt="" src={checkCircleIcon} {...imageProps} />
+          <Text size="small" color="white">Nice! You should receive an invite in a bit.</Text>
+        </React.Fragment>
+      );
+    }
+
+    if (this.state.requestStatus === 'failure') {
+      return (
+        <React.Fragment>
+          <img alt="" src={crossCircleIcon} {...imageProps} />
+          <Text size="small" color="white">Something went wrong, please try again later.</Text>
+        </React.Fragment>
+      );
+    }
+
+    return null;
+  }
+
+  renderForm() {
+    const { requestStatus } = this.state;
+    const isLoading = requestStatus === 'pending';
+    const didSubmit = requestStatus === 'success' || requestStatus === 'failure';
+
+    return (
+      <Card className="app__form" isLoading={isLoading}>
+      <Heading level={1}>Join</Heading>
+      <Text>By joining you agree to our above code of conduct.</Text>
+
+      <form onSubmit={this.onSubmit}>
+        <TextInput
+          id="email"
+          name="email"
+          placeholder="e.g. susan.kare@gmail.com"
+          label="Your email:"
+          autoComplete="off"
+          required={true}
+          type="email"
+          value={this.state.email}
+          onChange={this.onFieldChange}
+        />
+        <TextInput
+          id="link"
+          name="link"
+          placeholder="e.g. www.dribbble.com/design-god"
+          label="Your Twitter, Dribbble or portfolio:"
+          autoComplete="off"
+          required={true}
+          value={this.state.link}
+          onChange={this.onFieldChange}
+        />
+        <Button disabled={isLoading}>Send me an invite</Button>
+      </form>
+
+      { didSubmit && (
+        <div className="app__form-status">
+          {this.renderRequestStatus()}
+        </div>
+      )}
+
+    </Card>
+    );
   }
 
   render() {
@@ -105,36 +207,7 @@ class App extends Component {
             ]}
           />
 
-          <Card className="app__form" isLoading={this.state.isSubmitting}>
-            <Heading level={1}>Join</Heading>
-            <Text>By joining you agree to our above code of conduct.</Text>
-
-            <form onSubmit={this.onSubmit}>
-              <TextInput
-                id="email"
-                name="email"
-                placeholder="e.g. susan.kare@gmail.com"
-                label="Your email:"
-                autoComplete="off"
-                required={true}
-                type="email"
-                value={this.state.email}
-                onChange={this.onFieldChange}
-              />
-              <TextInput
-                id="link"
-                name="link"
-                placeholder="e.g. www.dribbble.com/design-god"
-                label="Your Twitter, Dribbble or portfolio:"
-                autoComplete="off"
-                required={true}
-                value={this.state.link}
-                onChange={this.onFieldChange}
-              />
-              <Button disabled={this.state.isSubmitting}>Send me an invite</Button>
-            </form>
-
-          </Card>
+          {this.renderForm()}
         </div>
       </div>
     );

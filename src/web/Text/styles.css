@@ -1,7 +1,6 @@
 .text {
   line-height: 1.4;
   margin: 16px 0;
-  color: #C6BEC7;
 }
 
 .text--large {
@@ -12,8 +11,20 @@
   font-size: 16px;
 }
 
+.text--small {
+  font-size: 14px;
+}
+
 .text--inheritColor {
   color: inherit;
+}
+
+.text--color-default {
+  color: #C6BEC7;
+}
+
+.text--color-white {
+  color: #FFF;
 }
 
 .text strong {
