@@ -126,7 +126,7 @@ class App extends Component {
           id="link"
           name="link"
           placeholder="e.g. www.dribbble.com/design-god"
-          label="Your Twitter, Dribbble or portfolio:"
+          label="A link to your Twitter, Dribbble or portfolio:"
           autoComplete="off"
           required={true}
           value={this.state.link}
