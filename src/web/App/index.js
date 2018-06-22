@@ -191,9 +191,9 @@ class App extends Component {
           <Heading level={2}>When something happens</Heading>
           <List
             items={[
-              <Text isInline>Let the person know that what they did is not appropriate and ask them to stop and/or edit their message(s). You can use ?coc as a shortcut for Slackbot to post a link to the Code of Conduct.</Text>,
+              <Text isInline>Let the person know that what they did is not appropriate and ask them to stop and/or edit their message(s). You can use <code>?coc</code> as a shortcut for Slackbot to post a link to the Code of Conduct.</Text>,
               <Text isInline>That person should immediately stop the behaviour and correct the issue.</Text>,
-              <Text isInline>If this doesn’t happen, or if you’re uncomfortable speaking up, contact the admins.</Text>,
+              <Text isInline>If this doesn’t happen, or if you’re uncomfortable speaking up, contact the admins. You can do this by using <code>/report</code>. This will privately share a message with the admins.</Text>,
               <Text isInline>As soon as available, an admin will join, identify themselves, and take further action.</Text>
             ]}
           />

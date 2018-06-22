@@ -8,6 +8,15 @@
   color: #FFF;
 }
 
+.text code {
+  font-family: 'Menlo', monospace;
+  color: #FFF;
+  background: #483a65;
+  font-size: 0.9em;
+  padding: 0.05em 0.2em;
+  border-radius: 2px;
+}
+
 .text--isInline {
   margin: 0;
 }
