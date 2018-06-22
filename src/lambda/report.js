@@ -21,7 +21,7 @@ export function handler(event, context, callback) {
         },
         isChannelPublic ? {
           title: 'Channel',
-          value: '<#${requestBody.channel_id}|${requestBody.channel_name}>',
+          value: `<#${requestBody.channel_id}|${requestBody.channel_name}>`,
         } : null,
         requestBody.text ? {
           title: 'Message',
