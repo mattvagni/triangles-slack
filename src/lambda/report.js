@@ -11,7 +11,7 @@ export function handler(event, context, callback) {
 
   web.chat.postMessage({
     channel: config.adminChannelId,
-    text: 'New report <!channel>',
+    text: ':warning: New report <!channel>',
     attachments: [{
       color: '#EB3636',
       fields: [
