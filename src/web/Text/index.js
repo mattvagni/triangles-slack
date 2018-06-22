@@ -6,8 +6,9 @@ import './styles.css';
 
 function Text(props) {
   const Element = props.isInline ? 'span' : 'p';
-  const classes = classnames('text', {
+  const classes = classnames('text', `text--${props.size}`, {
     'text--isInline': props.isInline,
+    'text--inheritColor': props.inheritColor,
   });
 
   return (
@@ -20,11 +21,15 @@ function Text(props) {
 Text.propTypes = {
   isInline: PropTypes.bool,
   isBold: PropTypes.bool,
+  inheritColor: PropTypes.bool,
+  size: PropTypes.oneOf(['medium', 'large']),
 }
 
 Text.defaultProps = {
   isInline: false,
   isBold: false,
+  inheritColor: false,
+  size: 'medium',
 };
 
 export default Text;

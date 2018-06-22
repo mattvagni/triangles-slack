@@ -1,20 +1,54 @@
 import React, { Component } from 'react';
 
+import Button from '../Button';
+import Card from '../Card';
 import Divider from '../Divider';
 import Heading from '../Heading';
 import List from '../List';
 import Text from '../Text';
+import TextInput from '../TextInput';
 import logo from './images/logo.svg';
 import './reset.css';
 import './styles.css';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: 'test@test.com',
+      link: 'www.google.com',
+      isSubmitting: false,
+    }
+
+    this.onSubmit = this.onSubmit.bind(this);
+    this.onFieldChange = this.onFieldChange.bind(this);
+  }
+
+  onSubmit(event) {
+    event.preventDefault();
+    this.setState({
+      isSubmitting: true,
+    });
+  }
+
+  onFieldChange(event) {
+    this.setState({
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
+  }
+
   render() {
     return (
       <div className="app">
         <div className="app__content">
 
           <img src={logo} alt='' aria-hidden className="app__logo" />
+
+          <Heading level={1} isHero>Triangles</Heading>
+          <Text size="large">A Slack community for designers in and around London.</Text>
+
+          <Divider />
 
           <Heading level={1}>Code of Conduct</Heading>
           <Text><Text isBold isInline>TL;DR</Text> Respect each-other. Be kind. Have empathy.</Text>
@@ -70,6 +104,37 @@ class App extends Component {
               <Text isInline>Next offence leads to immediate removal from the group.</Text>
             ]}
           />
+
+          <Card className="app__form" isLoading={this.state.isSubmitting}>
+            <Heading level={1}>Join</Heading>
+            <Text>By joining you agree to our above code of conduct.</Text>
+
+            <form onSubmit={this.onSubmit}>
+              <TextInput
+                id="email"
+                name="email"
+                placeholder="e.g. susan.kare@gmail.com"
+                label="Your email:"
+                autoComplete="off"
+                required={true}
+                type="email"
+                value={this.state.email}
+                onChange={this.onFieldChange}
+              />
+              <TextInput
+                id="link"
+                name="link"
+                placeholder="e.g. www.dribbble.com/design-god"
+                label="Your Twitter, Dribbble or portfolio:"
+                autoComplete="off"
+                required={true}
+                value={this.state.link}
+                onChange={this.onFieldChange}
+              />
+              <Button disabled={this.state.isSubmitting}>Send me an invite</Button>
+            </form>
+
+          </Card>
         </div>
       </div>
     );

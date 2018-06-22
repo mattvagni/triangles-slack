@@ -1,8 +1,19 @@
 .text {
-	font-size: 16px;
   line-height: 1.4;
   margin: 16px 0;
   color: #C6BEC7;
+}
+
+.text--large {
+  font-size: 22px;
+}
+
+.text--medium {
+  font-size: 16px;
+}
+
+.text--inheritColor {
+  color: inherit;
 }
 
 .text strong {

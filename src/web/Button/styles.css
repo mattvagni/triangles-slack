@@ -1,0 +1,32 @@
+.button {
+  padding: 0 16px;
+  height: 48px;
+  border-radius: 3px;
+  border: none;
+  -webkit-appearance: none;
+  border: none;
+  background: #FFF;
+  color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:focus,
+.button:hover,
+.button:active {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.button:active {
+  transform: translate3d(0, 1px, 0);
+}
+
+.button:disabled {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFF;
+}

@@ -1,0 +1,28 @@
+.loading-indicator {
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex: none;
+  width: 16px;
+  height: 16px;
+}
+
+.loading-indicator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid #634B97;
+  border-top-color: #FFF;
+  animation: loadingIndicator 0.5s linear infinite;
+}
+
+@keyframes loadingIndicator {
+  to {
+    transform: rotate(360deg);
+  }
+}
