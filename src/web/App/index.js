@@ -131,7 +131,7 @@ class App extends Component {
           value={this.state.link}
           onChange={this.onFieldChange}
         />
-        <Button disabled={isLoading}>Send me an invite</Button>
+        <Button disabled={isLoading}>Request an invite</Button>
       </form>
 
       { didSubmit && (
