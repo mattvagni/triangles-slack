@@ -4,6 +4,7 @@ export function handler(event, context, callback) {
   const data = event.body;
 
   const errorResponse = () => {
+    console.log('event', event);
     callback(null, {
       statusCode: 500,
       body: 'error'
