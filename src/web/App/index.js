@@ -90,8 +90,7 @@ class App extends Component {
         <React.Fragment>
           <img alt="" src={crossCircleIcon} {...imageProps} />
           <Text size="small">
-            <Text color="white" size="small" isInline>Gahh.</Text>
-            Something went wrong, please try again later.
+            <Text color="white" size="small" isInline>Gahh.</Text> Something went wrong, please try again later.
           </Text>
         </React.Fragment>
       );
