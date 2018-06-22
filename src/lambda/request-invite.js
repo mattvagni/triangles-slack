@@ -31,7 +31,6 @@ export function handler(event, context, callback) {
     channel: config.adminChannelId,
     text: ':woman-raising-hand: New invite request:',
     attachments: [{
-      color: '#FF0000',
       fields: [
         {
           title: 'Email',
