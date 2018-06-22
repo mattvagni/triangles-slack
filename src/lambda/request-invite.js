@@ -37,7 +37,7 @@ export function handler(event, context, callback) {
           value: data.email,
         },
         {
-          title: 'Link',
+          title: 'URL',
           value: data.link,
         },
       ]
