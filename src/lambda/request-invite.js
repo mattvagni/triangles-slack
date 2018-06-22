@@ -1,14 +1,22 @@
 import config from '../config';
 
 export function handler(event, context, callback) {
-  const data = event.body;
+  const data = {};
 
   const errorResponse = () => {
-    console.log('event', event);
+    console.error('event', event);
+    console.error('data', data);
     callback(null, {
       statusCode: 500,
       body: 'error'
     });
+  }
+
+  try {
+    data = JSON.parse(event.body);
+  } catch (error) {
+    console.log(error);
+    return errorResponse();
   }
 
   if (!data.email || !data.link) {
