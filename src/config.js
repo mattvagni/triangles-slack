@@ -1,3 +1,3 @@
 module.exports = {
-  adminChannelId: 'GB9TEC6DP',
+  adminChannelId: 'GB7P3JRK6',
 }
