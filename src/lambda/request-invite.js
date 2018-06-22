@@ -1,4 +1,8 @@
+import { WebClient } from '@slack/client';
 import config from '../config';
+
+const token = process.env.SLACK_TOKEN;
+const web = new WebClient(token);
 
 export function handler(event, context, callback) {
   let data = {};
