@@ -8,8 +8,15 @@
 .app__content {
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	line-height: 1;
-	width: 600px;
+	max-width: 600px;
 	margin: 100px auto 400px;
+	padding: 0 16px;
+}
+
+@media only screen and (max-width: 600px) {
+	.app__content {
+		margin-top: 48px;
+	}
 }
 
 .app__logo {

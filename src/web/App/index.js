@@ -14,7 +14,7 @@ class App extends Component {
       <div className="app">
         <div className="app__content">
 
-          <img src={logo} className="app__logo" />
+          <img src={logo} alt='' aria-hidden className="app__logo" />
 
           <Heading level={1}>Code of Conduct</Heading>
           <Text><Text isBold isInline>TL;DR</Text> Respect each-other. Be kind. Have empathy.</Text>

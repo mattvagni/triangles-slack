@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './styles.css';
+import './styles.css';
 
 function Divider() {
   return <hr className="divider" />;
