@@ -1,7 +1,7 @@
 import config from '../config';
 
 export function handler(event, context, callback) {
-  const data = {};
+  let data = {};
 
   const errorResponse = () => {
     console.error('event', event);
