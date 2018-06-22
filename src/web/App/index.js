@@ -78,7 +78,9 @@ class App extends Component {
       return (
         <React.Fragment>
           <img alt="" src={checkCircleIcon} {...imageProps} />
-          <Text size="small" color="white">Nice! You should receive an invite in a bit.</Text>
+          <Text size="small">
+            <Text color="white" size="small" isInline>Nice!</Text> You should receive an invite in a bit.
+          </Text>
         </React.Fragment>
       );
     }
@@ -87,7 +89,10 @@ class App extends Component {
       return (
         <React.Fragment>
           <img alt="" src={crossCircleIcon} {...imageProps} />
-          <Text size="small" color="white">Something went wrong, please try again later.</Text>
+          <Text size="small">
+            <Text color="white" size="small" isInline>Gahh.</Text>
+            Something went wrong, please try again later.
+          </Text>
         </React.Fragment>
       );
     }

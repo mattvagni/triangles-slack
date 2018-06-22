@@ -3,6 +3,15 @@
   margin: 16px 0;
 }
 
+.text strong {
+  font-weight: 500;
+  color: #FFF;
+}
+
+.text--isInline {
+  margin: 0;
+}
+
 .text--large {
   font-size: 22px;
 }
@@ -25,13 +34,4 @@
 
 .text--color-white {
   color: #FFF;
-}
-
-.text strong {
-  font-weight: 500;
-  color: #FFF;
-}
-
-.text--isInline {
-  margin: 0;
 }
