@@ -7,3 +7,8 @@
   from = "https://triangles-slack.netlify.com/*"
   to = "https://triangles-slack.com/:splat"
   status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
