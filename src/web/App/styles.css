@@ -27,3 +27,8 @@ html {
 	height: 64px;
 	margin: 0 0 32px;
 }
+
+.app__footer {
+	margin: 80px 32px 0;
+	text-align: center;
+}

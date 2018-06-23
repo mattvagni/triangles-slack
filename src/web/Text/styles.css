@@ -17,6 +17,14 @@
   border-radius: 2px;
 }
 
+.text a {
+  color: #FFF;
+}
+
+.text a:hover {
+  color: inherit;
+}
+
 .text--isInline {
   margin: 0;
 }

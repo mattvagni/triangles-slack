@@ -78,6 +78,12 @@ class App extends Component {
           />
 
           <JoinForm />
+
+          <div class="app__footer">
+            <Text size="small">Found a typo? Having any issues? <a href="https://github.com/mattvagni/triangles-slack/issues/new" target="_blank">Open a Github issue</a>.</Text>
+            <Text size="small">Alternatively email us: <a href="mailto:triangles.slack@gmail.com">triangles.slack@gmail.com</a></Text>
+          </div>
+
         </div>
       </div>
     );
