@@ -41,8 +41,8 @@
   font-size: 14px;
 }
 
-.text--inheritColor {
-  color: inherit;
+.text--noWrap {
+  white-space: pre;
 }
 
 .text--color-default {

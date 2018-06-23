@@ -12,7 +12,7 @@ function Text(props) {
     `text--color-${props.color}`,
     {
       'text--isInline': props.isInline,
-      'text--inheritColor': props.inheritColor,
+      'text--noWrap': props.noWrap,
     }
   );
 
@@ -26,7 +26,7 @@ function Text(props) {
 Text.propTypes = {
   isInline: PropTypes.bool,
   isBold: PropTypes.bool,
-  inheritColor: PropTypes.bool,
+  noWrap: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   color: PropTypes.oneOf(['default', 'white']),
 }
@@ -34,7 +34,7 @@ Text.propTypes = {
 Text.defaultProps = {
   isInline: false,
   isBold: false,
-  inheritColor: false,
+  noWrap: false,
   size: 'medium',
   color: 'default',
 };
