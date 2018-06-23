@@ -12,7 +12,7 @@ html {
 	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 	line-height: 1;
 	max-width: 600px;
-	margin: 100px auto 200px;
+	margin: 100px auto 100px;
 	padding: 0 16px;
 }
 
@@ -26,21 +26,4 @@ html {
 	width: 64px;
 	height: 64px;
 	margin: 0 0 32px;
-}
-
-.app__form {
-	margin-top: 80px;
-}
-
-.app__form-status {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 24px;
-}
-
-.app__form-status-icon {
-	margin-right: 8px;
-	width: 22px;
-	height: 22px;
 }

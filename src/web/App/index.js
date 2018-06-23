@@ -1,149 +1,15 @@
 import React, { Component } from 'react';
 
-import Button from '../Button';
-import Card from '../Card';
 import Divider from '../Divider';
+import JoinForm from '../JoinForm';
 import Heading from '../Heading';
 import List from '../List';
 import Text from '../Text';
-import TextInput from '../TextInput';
 import logo from './images/logo.svg';
-import checkCircleIcon from './images/check-circle.svg';
-import crossCircleIcon from './images/cross-circle.svg';
-
 import './reset.css';
 import './styles.css';
 
 class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      link: '',
-      requestStatus: 'idle',
-    }
-
-    this.onSubmit = this.onSubmit.bind(this);
-    this.onFieldChange = this.onFieldChange.bind(this);
-  }
-
-  onSubmit(event) {
-    event.preventDefault();
-    this.setState({
-      requestStatus: 'pending',
-    });
-
-    fetch('/.netlify/functions/request-invite/', {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        email: this.state.email,
-        link: this.state.link
-      })
-    })
-    .then(res => {
-      if (res.status > 200) {
-        throw new Error('Back-end error');
-      }
-      this.setState({
-        email: '',
-        link: '',
-        requestStatus: 'success',
-      })
-    })
-    .catch(err => {
-      console.error(err);
-      this.setState({
-        requestStatus: 'failure'
-      })
-    })
-  }
-
-  onFieldChange(event) {
-    this.setState({
-      [event.currentTarget.name]: event.currentTarget.value,
-    });
-  }
-
-  renderRequestStatus() {
-    const imageProps = {
-      className: 'app__form-status-icon',
-      'aria-hidden': true,
-    };
-
-    if (this.state.requestStatus === 'success') {
-      return (
-        <React.Fragment>
-          <img alt="" src={checkCircleIcon} {...imageProps} />
-          <Text size="small">
-            <Text color="white" size="small" isInline>Nice!</Text> You should receive an invite in a bit.
-          </Text>
-        </React.Fragment>
-      );
-    }
-
-    if (this.state.requestStatus === 'failure') {
-      return (
-        <React.Fragment>
-          <img alt="" src={crossCircleIcon} {...imageProps} />
-          <Text size="small">
-            <Text color="white" size="small" isInline>Gahh.</Text> Something went wrong, please try again later.
-          </Text>
-        </React.Fragment>
-      );
-    }
-
-    return null;
-  }
-
-  renderForm() {
-    const { requestStatus } = this.state;
-    const isLoading = requestStatus === 'pending';
-    const didSubmit = requestStatus === 'success' || requestStatus === 'failure';
-
-    return (
-      <Card className="app__form" isLoading={isLoading}>
-      <Heading level={1}>Join</Heading>
-      <Text>By joining you agree to our above code of conduct.</Text>
-
-      <form onSubmit={this.onSubmit}>
-        <TextInput
-          id="email"
-          name="email"
-          placeholder="e.g. susan.kare@gmail.com"
-          label="Your email:"
-          autoComplete="off"
-          required={true}
-          type="email"
-          value={this.state.email}
-          onChange={this.onFieldChange}
-        />
-        <TextInput
-          id="link"
-          name="link"
-          placeholder="e.g. www.dribbble.com/design-god"
-          label="A link to your Twitter, Dribbble or portfolio:"
-          autoComplete="off"
-          required={true}
-          value={this.state.link}
-          onChange={this.onFieldChange}
-        />
-        <Button disabled={isLoading}>Request an invite</Button>
-      </form>
-
-      { didSubmit && (
-        <div className="app__form-status">
-          {this.renderRequestStatus()}
-        </div>
-      )}
-
-    </Card>
-    );
-  }
-
   render() {
     return (
       <div className="app">
@@ -193,7 +59,7 @@ class App extends Component {
             items={[
               <Text isInline>Let the person know that what they did is not appropriate and ask them to stop and/or edit their message(s). You can use <code>?coc</code> as a shortcut for Slackbot to post a link to the Code of Conduct.</Text>,
               <Text isInline>That person should immediately stop the behaviour and correct the issue.</Text>,
-              <Text isInline>If this doesn’t happen, or if you’re uncomfortable speaking up, contact the admins. You can do this by using <code>/report</code>. This will privately share a message with the admins.</Text>,
+              <Text isInline>If this doesn’t happen, or if you’re uncomfortable speaking up, contact the admins. You can do this by using <code>/report</code>. This will privately share a message with the admins. Alternatively you can message </Text>,
               <Text isInline>As soon as available, an admin will join, identify themselves, and take further action.</Text>
             ]}
           />
@@ -211,7 +77,7 @@ class App extends Component {
             ]}
           />
 
-          {this.renderForm()}
+          <JoinForm />
         </div>
       </div>
     );

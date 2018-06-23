@@ -1,0 +1,31 @@
+.join-form {
+	margin-top: 80px;
+}
+
+.join-form__status {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  margin-top: 24px;
+  padding: 0 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  .join-form__status {
+    text-align: center;
+    flex-direction: column;
+  }
+}
+
+.join-form__status-icon {
+	margin-right: 8px;
+	width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .join-form__status-icon {
+    margin: 0 0 -8px 0;
+  }
+}
