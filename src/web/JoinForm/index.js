@@ -26,6 +26,11 @@ class JoinForm extends React.Component {
 
   onSubmit(event) {
     event.preventDefault();
+
+    if (window.mixpanel) {
+      window.mixpanel.track("join-form-submit");
+    }
+
     this.setState({
       requestStatus: 'pending',
     });
