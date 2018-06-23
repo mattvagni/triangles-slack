@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://triangles-slack.netlify.com/* https://triangles-slack.com/:splat 301!
