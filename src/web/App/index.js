@@ -23,8 +23,8 @@ class App extends Component {
           <Divider />
 
           <Heading level={1}>Code of Conduct</Heading>
-          <Text><Text isBold isInline>TL;DR</Text> Respect each-other. Be kind. Have empathy.</Text>
-          <Text>In the interest of fostering an open and welcoming environment, all members pledge to making participation in our community a harassment-free experience for everyone: regardless of age, appearance, ethnicity, gender identity, level of experience, nationality, race, religion, or sexual identity and orientation.</Text>
+          <Text><Text isBold isInline>TL;DR</Text> Respect each other. Be kind. Have empathy.</Text>
+          <Text>In the interest of fostering an open and welcoming environment, all members pledge to make participation in our community a harassment-free experience for everyone: regardless of age, appearance, ethnicity, gender identity, level of experience, nationality, race, religion, or sexual identity and orientation.</Text>
 
           <Heading level={3}>Examples of behaviour that contributes to creating a positive environment include:</Heading>
           <List
@@ -42,11 +42,10 @@ class App extends Component {
               <Text isInline>The use of sexualised language or imagery and unwelcome sexual attention or advances.</Text>,
               <Text isInline>Trolling, insulting/derogatory comments, and personal or political attacks.</Text>,
               <Text isInline>Public or private harassment, deliberate intimidation, or threats.</Text>,
-              <Text isInline>Publishing others’ private information without explicit permission. This includes any sort of “outing” of any aspect of someone’s identity without their consent.</Text>,
-              <Text isInline>Publishing screenshots or quotes, without all quoted users’ *explicit* consent.</Text>,
               <Text isInline>Any of the above even when presented as “ironic” or “joking”.</Text>,
+              <Text isInline>Publishing screenshots or quotes, without all quoted users’ <strong>explicit</strong> consent.</Text>,
               <Text isInline>Unsolicited explanations under the assumption that someone doesn’t already know it. Don’t assume what people’s knowledge gaps are - ask before you teach.</Text>,
-              <Text isInline>Same goes for unsolicited criticism or feedback. Ask first unless you are sure.</Text>,
+              <Text isInline>Same goes for unsolicited design critique or feedback. Ask first.</Text>,
               <Text isInline>Feigning or exaggerating surprise when someone admits to not knowing something.</Text>,
               <Text isInline>Other conduct which could reasonably be considered inappropriate in a professional or community setting.</Text>
             ]}
@@ -54,21 +53,19 @@ class App extends Component {
 
           <Divider />
 
-          <Heading level={2}>When something happens</Heading>
+          <Heading level={1}>When something happens</Heading>
           <List
             items={[
               <Text isInline>Let the person know that what they did is not appropriate and ask them to stop and/or edit their message(s). You can use <code>?coc</code> as a shortcut for Slackbot to post a link to the Code of Conduct.</Text>,
-              <Text isInline>That person should immediately stop the behaviour and correct the issue.</Text>,
-              <Text isInline>If this doesn’t happen, or if you’re uncomfortable speaking up, contact the admins. You can do this by using <code>/report</code>. This will privately share a message with the admins. Alternatively you can message </Text>,
+              <Text isInline>That person should immediately stop the behaviour, own up and apologize if appropriate.</Text>,
+              <Text isInline>If this doesn’t happen, or if you’re uncomfortable speaking up, contact the admins. You can do this by using <code>/report</code>. This will privately share a message with the admins.</Text>,
               <Text isInline>As soon as available, an admin will join, identify themselves, and take further action.</Text>
             ]}
           />
-          <Text>When reporting, please include any relevant details, links, screenshots, context, or other information that may be used to better understand and resolve the situation.</Text>
+          <Text>When reporting, please include any relevant details, context, or other information that may be used to better understand and resolve the situation.</Text>
           <Text isBold>The admin team will prioritise the well-being and comfort of the recipients of the violation over the comfort of the violator.</Text>
 
-          <Divider />
-
-          <Heading level={2}>3 Strikes</Heading>
+          <Heading level={2}>3 strikes</Heading>
           <List
             items={[
               <Text isInline>The admin will repeat the request to stop</Text>,
@@ -77,10 +74,21 @@ class App extends Component {
             ]}
           />
 
+          <Heading level={2}>Apologize for mistakes</Heading>
+          <Text>Should you catch yourself behaving disrespectfully, or be confronted as such, listen intently, own up to your words and actions, and apologize accordingly. No one is perfect, and even well-intentioned people make mistakes.</Text>
+          <Text>What matters is how you handle them and that you avoid repeating them in the future.</Text>
+
+          <Divider />
+
+          <Heading level={1}>Privacy</Heading>
+          <Text>This community is not a public space. However, no one has signed an non-disclosure agreement to participate, and you should not presume anything you say here will remain private, so act accordingly.</Text>
+          <Text>If you want to publicly disclose anything discussed, use the <a href="https://www.chathamhouse.org/chatham-house-rule" rel="noopener noreferrer" target="_blank">Chatham House Rule</a> as a guideline.</Text>
+          <Text>Alternatively you must seek out the <strong>explicit</strong> permission from the originator of the content in order to share any content.</Text>
+
           <JoinForm />
 
           <div class="app__footer">
-            <Text size="small">Found a typo? Having any issues? <Text size="small" isInline noWrap><a href="https://github.com/mattvagni/triangles-slack/issues/new" target="_blank">Open a GitHub issue</a></Text></Text>
+            <Text size="small">Found a typo? Having any issues? <Text size="small" isInline noWrap><a href="https://github.com/mattvagni/triangles-slack/issues/new" rel="noopener noreferrer" target="_blank">Open a GitHub issue</a></Text></Text>
             <Text size="small">Alternatively email us: <a href="mailto:triangles.slack@gmail.com">triangles.slack@gmail.com</a></Text>
           </div>
 
