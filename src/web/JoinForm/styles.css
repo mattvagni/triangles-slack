@@ -1,5 +1,12 @@
 .join-form {
-	margin-top: 80px;
+  margin-top: 80px;
+}
+
+@media only screen and (max-width: 600px) {
+  .join-form {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
 }
 
 .join-form__status {
