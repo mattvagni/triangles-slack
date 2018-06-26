@@ -83,15 +83,16 @@ class App extends Component {
           <Divider />
 
           <Heading level={1}>Privacy</Heading>
-          <Text>This community is not a public space. However, no one has signed an non-disclosure agreement to participate, and you should not presume anything you say here will remain private, so act accordingly.</Text>
+          <Text>This community is not a public space. However, no one has signed a non-disclosure agreement to participate, and you should not presume anything you say here will remain private, so act accordingly.</Text>
           <Text>If you want to publicly disclose anything discussed, use the <a href="https://www.chathamhouse.org/chatham-house-rule" rel="noopener noreferrer" target="_blank">Chatham House Rule</a> as a guideline.</Text>
           <Text>Alternatively you must seek out the <strong>explicit</strong> permission from the originator of the content in order to share any content.</Text>
 
           <JoinForm />
 
+          <Text size="small" isCentered>This Code of Conduct is adapted from <a href="https://wealljs.org/code-of-conduct" target="_blank" rel="noopener noreferrer">WeAllJS</a> and the <a href="https://github.com/randsleadershipslack/documents-and-resources/blob/master/code-of-conduct.md" target="_blank" rel="noopener noreferrer">Rands Leadership Slack</a>. Both are <strong>great</strong> communities and totally worth checking out.</Text>
           <Text size="small" isCentered>Found a typo? Having any issues? <Text size="small" isInline noWrap><a href="https://github.com/mattvagni/triangles-slack/issues/new" rel="noopener noreferrer" target="_blank">Open a GitHub issue</a></Text></Text>
           <Text size="small" isCentered>If you need a private way to get in touch you can email us: <a href="mailto:triangles.slack@gmail.com">triangles.slack@gmail.com</a></Text>
-          <Text size="small" isCentered>This Code of Conduct is adapted from <a href="https://wealljs.org/code-of-conduct" target="_blank" rel="noopener noreferrer">WeAllJS</a> and the <a href="https://github.com/randsleadershipslack/documents-and-resources/blob/master/code-of-conduct.md" target="_blank" rel="noopener noreferrer">Rands Leadership Slack</a>. Both are <strong>great</strong> communities and totally worth checking out.</Text>
+
         </div>
       </div>
     );
