@@ -12,6 +12,7 @@ function Text(props) {
     `text--color-${props.color}`,
     {
       'text--isInline': props.isInline,
+      'text--isCentered': props.isCentered,
       'text--noWrap': props.noWrap,
     }
   );
@@ -25,6 +26,7 @@ function Text(props) {
 
 Text.propTypes = {
   isInline: PropTypes.bool,
+  isCentered: PropTypes.bool,
   isBold: PropTypes.bool,
   noWrap: PropTypes.bool,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
@@ -33,6 +35,7 @@ Text.propTypes = {
 
 Text.defaultProps = {
   isInline: false,
+  isCentered: false,
   isBold: false,
   noWrap: false,
   size: 'medium',

@@ -89,11 +89,9 @@ class App extends Component {
 
           <JoinForm />
 
-          <div class="app__footer">
-            <Text size="small">Found a typo? Having any issues? <Text size="small" isInline noWrap><a href="https://github.com/mattvagni/triangles-slack/issues/new" rel="noopener noreferrer" target="_blank">Open a GitHub issue</a></Text></Text>
-            <Text size="small">Alternatively email us: <a href="mailto:triangles.slack@gmail.com">triangles.slack@gmail.com</a></Text>
-          </div>
-
+          <Text size="small" isCentered>Found a typo? Having any issues? <Text size="small" isInline noWrap><a href="https://github.com/mattvagni/triangles-slack/issues/new" rel="noopener noreferrer" target="_blank">Open a GitHub issue</a></Text></Text>
+          <Text size="small" isCentered>If you need a private way to get in touch you can email us: <a href="mailto:triangles.slack@gmail.com">triangles.slack@gmail.com</a></Text>
+          <Text size="small" isCentered>This Code of Conduct is adapted from <a href="https://wealljs.org/code-of-conduct" target="_blank" rel="noopener noreferrer">WeAllJS</a> and the <a href="https://github.com/randsleadershipslack/documents-and-resources/blob/master/code-of-conduct.md" target="_blank" rel="noopener noreferrer">Rands Leadership Slack</a>. Both are <strong>great</strong> communities and totally worth checking out.</Text>
         </div>
       </div>
     );
