@@ -57,7 +57,7 @@ class App extends Component {
           <List
             items={[
               <Text isInline>Let the person know that what they did is not appropriate and ask them to stop and/or edit their message(s). You can use <code>?coc</code> as a shortcut for Slackbot to post a link to the Code of Conduct.</Text>,
-              <Text isInline>That person should immediately stop the behaviour, own up and apologize if appropriate.</Text>,
+              <Text isInline>That person should immediately stop the behaviour, own up and apologise if appropriate.</Text>,
               <Text isInline>If this doesn’t happen, or if you’re uncomfortable speaking up, contact the admins. You can do this by using <code>/report</code>. This will privately share a message with the admins.</Text>,
               <Text isInline>As soon as available, an admin will join, identify themselves, and take further action.</Text>
             ]}
@@ -77,7 +77,7 @@ class App extends Component {
           <Text>Admins may skip any of these steps depending on the situation and severity of what happened.</Text>
 
           <Heading level={2}>Apologise for mistakes</Heading>
-          <Text>Should you catch yourself behaving disrespectfully, or be confronted as such, listen intently, own up to your words and actions, and apologize accordingly. No one is perfect, and even well-intentioned people make mistakes.</Text>
+          <Text>Should you catch yourself behaving disrespectfully, or be confronted as such, listen intently, own up to your words and actions, and apologise accordingly. No one is perfect, and even well-intentioned people make mistakes.</Text>
           <Text>What matters is how you handle them and that you avoid repeating them in the future.</Text>
 
           <Divider />
