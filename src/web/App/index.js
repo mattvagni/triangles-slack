@@ -74,7 +74,7 @@ class App extends Component {
             ]}
           />
 
-          <Text>Admin's may skip any of these steps depending on the situation and severity of what happened.</Text>
+          <Text>Admins may skip any of these steps depending on the situation and severity of what happened.</Text>
 
           <Heading level={2}>Apologise for mistakes</Heading>
           <Text>Should you catch yourself behaving disrespectfully, or be confronted as such, listen intently, own up to your words and actions, and apologize accordingly. No one is perfect, and even well-intentioned people make mistakes.</Text>
