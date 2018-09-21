@@ -125,7 +125,7 @@ class JoinForm extends React.Component {
         <TextInput
           id="link"
           name="link"
-          placeholder="e.g. www.dribbble.com/design-god"
+          placeholder="e.g. www.twitter.com/jnr_designer"
           label="Your website / Twitter / Dribble:"
           helpText="(Just to double check you aren't a recruiter.)"
           autoComplete="off"
