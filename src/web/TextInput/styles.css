@@ -4,13 +4,20 @@
 }
 
 .text-input__label {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   display: block;
   width: 100%;
   cursor: pointer;
   color: #FFF;
   font-size: 15px;
   font-weight: 500;
+}
+
+.text-input__help-text {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #C6BEC7;
 }
 
 .text-input__input {

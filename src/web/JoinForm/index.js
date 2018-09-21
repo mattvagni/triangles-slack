@@ -108,7 +108,7 @@ class JoinForm extends React.Component {
     return (
       <Card className="join-form" isLoading={isLoading}>
       <Heading level={1}>Join</Heading>
-      <Text>By joining you agree to our above code of conduct.</Text>
+      <Text>By joining you agree to our above code of conduct. Your details will only be shared with group admins.</Text>
 
       <form onSubmit={this.onSubmit}>
         <TextInput
@@ -126,7 +126,8 @@ class JoinForm extends React.Component {
           id="link"
           name="link"
           placeholder="e.g. www.dribbble.com/design-god"
-          label="A link to your Twitter, Dribbble or portfolio:"
+          label="Your website / Twitter / Dribble:"
+          helpText="(Just to double check you aren't a recruiter.)"
           autoComplete="off"
           required={true}
           value={this.state.link}
