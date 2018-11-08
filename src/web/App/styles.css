@@ -2,6 +2,16 @@ html {
 	background: #2C2443;
 }
 
+::selection {
+ background: #F1F1F1;
+ color: #000;
+}
+
+::-moz-selection {
+ background: #F1F1F1;
+ color: #000;
+}
+
 .app {
 	min-width: 100vw;
 	min-height: 100vh;
