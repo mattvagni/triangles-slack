@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
-const TextInput = ({ id, name, label, helpText, placeholder, type, ...otherProps }) => (
+const TextInput = ({ id, name, label, helpText, placeholder, type, pattern, title, ...otherProps }) => (
   <fieldset className="text-input">
     <label className="text-input__label" htmlFor={id}>
       {label}
@@ -15,6 +15,8 @@ const TextInput = ({ id, name, label, helpText, placeholder, type, ...otherProps
       placeholder={placeholder}
       id={id}
       name={name}
+      pattern={pattern}
+      title={title}
       {...otherProps}
     />
   </fieldset>
@@ -27,6 +29,8 @@ TextInput.propTypes = {
   helpText: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['email', 'text']),
+  pattern: PropTypes.string,
+  title: PropTypes.string,
 };
 
 TextInput.defaultProps = {
