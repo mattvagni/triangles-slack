@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build"
+  command = "yarn run build && yarn run build:lambda"
   functions = "built-lambda"
   publish = "build"
 
