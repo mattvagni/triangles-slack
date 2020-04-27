@@ -8,7 +8,7 @@
     "netlify-lambda": "^0.4.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.2",
     "react-scripts": "1.1.4"
   },
   "scripts": {
