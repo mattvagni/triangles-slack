@@ -1,4 +1,4 @@
-import { WebClient } from '@slack/client';
+import { WebClient } from '@slack/web-api';
 import config from '../config';
 
 const token = process.env.SLACK_TOKEN;
