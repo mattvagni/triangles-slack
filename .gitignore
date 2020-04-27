@@ -11,7 +11,6 @@
 # misc
 .DS_Store
 *.log
-*.lock
 
 # we use yarn because np
 package-lock.json
